@@ -143,12 +143,6 @@ docker compose up -d --build
 | **Swagger UI**  | http://localhost:8080/swagger-ui.html |
 | **API Docs**    | http://localhost:8080/api-docs        |
 
-### 4. Default Users
-
-| Username | Password    | Role   |
-| -------- | ----------- | ------ |
-| admin    | admin123    | ADMIN  |
-| tenant1  | password123 | TENANT |
 
 ### 5. Stop Services
 
@@ -353,8 +347,8 @@ Set in `docker-compose.yml`:
 ```yaml
 SPRING_PROFILES_ACTIVE: docker
 SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tenantmanager
-SPRING_DATASOURCE_USERNAME: postgres
-SPRING_DATASOURCE_PASSWORD: akshat12345
+SPRING_DATASOURCE_USERNAME: 
+SPRING_DATASOURCE_PASSWORD: 
 SPRING_DATA_REDIS_HOST: redis
 ```
 
@@ -364,10 +358,10 @@ Set in `tenantmanagerbackend/src/main/resources/application.properties`:
 
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/tenantmanager
-spring.datasource.username=postgres
-spring.datasource.password=your_password
+spring.datasource.username=
+spring.datasource.password=
 spring.data.redis.host=localhost
-jwt.secret=yourSecretKey123!@#$%^&*()_+
+jwt.secret=
 ```
 
 ## 🐛 Troubleshooting
@@ -459,7 +453,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- Your Name - Initial work
+- Your Name - Akshat Sharma
 
 ## 🙏 Acknowledgments
 
