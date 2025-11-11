@@ -453,7 +453,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- Your Name - Akshat Sharma
+- Akshat Sharma
 
 ## 🙏 Acknowledgments
 
