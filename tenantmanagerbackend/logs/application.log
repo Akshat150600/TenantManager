@@ -1,0 +1,84 @@
+2025-11-11 06:54:36 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.projects.tenantmanager.repository.MaintenanceRequestRepositoryTest]: MaintenanceRequestRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-11 06:54:37 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.projects.tenantmanager.TenantmanagerApplication for test class com.projects.tenantmanager.repository.MaintenanceRequestRepositoryTest
+2025-11-11 06:54:37 [main] INFO  c.p.t.r.MaintenanceRequestRepositoryTest - Starting MaintenanceRequestRepositoryTest using Java 21.0.9 with PID 3056 (started by aksha in D:\Projects\React-Redux\tenantManager\tenantmanagerbackend)
+2025-11-11 06:54:37 [main] INFO  c.p.t.r.MaintenanceRequestRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2025-11-11 06:54:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-11 06:54:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-11 06:54:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 259 ms. Found 2 JPA repository interfaces.
+2025-11-11 06:54:38 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2025-11-11 06:54:39 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:44e70a0d-4bbd-42b7-9fe4-23abcda9d9c7;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-11-11 06:54:39 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-11 06:54:39 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-11 06:54:39 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-11 06:54:40 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-11 06:54:40 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.3.232 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-11-11 06:54:40 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-11 06:54:40 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@5f6e2ad9']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-11 06:54:41 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-11 06:54:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11 06:54:42 [main] INFO  c.p.t.r.MaintenanceRequestRepositoryTest - Started MaintenanceRequestRepositoryTest in 4.785 seconds (process running for 6.548)
+2025-11-11 06:54:42 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.projects.tenantmanager.repository.UserRepositoryTest]: UserRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-11 06:54:43 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.projects.tenantmanager.TenantmanagerApplication for test class com.projects.tenantmanager.repository.UserRepositoryTest
+2025-11-11 06:54:43 [main] INFO  c.p.t.service.MaintenanceService - Approving maintenance request: b45d763e-dc01-4438-9db6-5056243075d6
+2025-11-11 06:54:43 [main] INFO  c.p.t.service.MaintenanceService - Updating status for request: cea6bf80-5889-40fb-87bd-b1da113dd47d to RESOLVED
+2025-11-11 06:54:43 [main] INFO  c.p.t.service.MaintenanceService - Rejecting maintenance request: e6e96f36-6386-44f4-932f-a2b5267912e7
+2025-11-11 06:54:43 [main] INFO  c.p.t.service.MaintenanceService - Saving maintenance request for tenant: tenant1, unit: 101, department: PLUMBING
+2025-11-11 06:54:43 [main] INFO  c.p.t.service.MaintenanceService - Rejecting maintenance request: 14eb7296-faae-4ff7-981a-d3ec8dbb09a6
+2025-11-11 06:54:44 [main] INFO  c.p.t.service.MaintenanceService - Approving maintenance request: e545ff17-60b7-4f59-b602-1b36129cc825
+2025-11-11 06:54:44 [main] ERROR c.p.t.service.MaintenanceService - User not found: nonexistent
+2025-11-11 06:54:44 [main] INFO  c.p.t.service.MaintenanceService - Updating status for request: ea323bc3-b955-4874-a3c9-377675437be5 to RESOLVED
+2025-11-11 06:54:44 [main] INFO  c.p.t.service.UserService - User logged out successfully: testuser
+2025-11-11 06:54:44 [main] ERROR c.p.t.service.UserService - User not found: nonexistent
+2025-11-11 06:54:44 [main] ERROR c.p.t.service.UserService - Invalid password for user: testuser
+2025-11-11 06:54:44 [main] INFO  c.p.t.service.UserService - User authenticated successfully: testuser
+2025-11-11 06:54:44 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.projects.tenantmanager.TenantmanagerApplicationTests]: TenantmanagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-11 06:54:44 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.projects.tenantmanager.TenantmanagerApplication for test class com.projects.tenantmanager.TenantmanagerApplicationTests
+2025-11-11 06:54:44 [main] INFO  c.p.t.TenantmanagerApplicationTests - Starting TenantmanagerApplicationTests using Java 21.0.9 with PID 3056 (started by aksha in D:\Projects\React-Redux\tenantManager\tenantmanagerbackend)
+2025-11-11 06:54:44 [main] INFO  c.p.t.TenantmanagerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.projects.tenantmanager.repository.MaintenanceRequestRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.projects.tenantmanager.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-11-11 06:54:45 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-11-11 06:54:46 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-11 06:54:46 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-11 06:54:46 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-11 06:54:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-11 06:54:47 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@223095d3
+2025-11-11 06:54:47 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-11 06:54:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-11 06:54:47 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-11 06:54:47 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-11 06:54:47 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11 06:54:48 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-11 06:54:49 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 30b12691-b001-43be-b240-4654ace210d7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-11 06:54:49 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-11 06:54:49 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-11 06:54:49 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-11 06:54:50 [main] INFO  c.p.t.TenantmanagerApplicationTests - Started TenantmanagerApplicationTests in 5.644 seconds (process running for 14.647)
+2025-11-11 06:54:50 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11 06:54:50 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-11 06:54:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-11 06:54:50 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: tenantmanager-postgres
+    environment:
+      POSTGRES_DB: "tenantmanager"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "akshat12345"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - tenantmanager-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: tenantmanager-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - tenantmanager-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Backend
+  backend:
+    build:
+      context: ./tenantmanagerbackend
+      dockerfile: Dockerfile
+    container_name: tenantmanager-backend
+    environment:
+      SPRING_PROFILES_ACTIVE: "docker"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres:5432/tenantmanager"
+      SPRING_DATASOURCE_USERNAME: "postgres"
+      SPRING_DATASOURCE_PASSWORD: "akshat12345"
+      SPRING_DATA_REDIS_HOST: "redis"
+      SPRING_DATA_REDIS_PORT: "6379"
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - tenantmanager-network
+    restart: unless-stopped
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./tenantmanagerui
+      dockerfile: Dockerfile
+    container_name: tenantmanager-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - tenantmanager-network
+    restart: unless-stopped
+
+networks:
+  tenantmanager-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
