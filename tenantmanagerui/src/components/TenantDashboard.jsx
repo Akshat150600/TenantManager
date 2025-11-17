@@ -47,17 +47,17 @@ const TenantDashboard = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        '/api/maintenance/create',
+        "http://localhost:8080/api/maintenance/create",
         {
           unitNumber: formData.unitNumber,
           description: formData.description,
-          department: formData.department
+          department: formData.department,
         },
         {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
         }
       );
 

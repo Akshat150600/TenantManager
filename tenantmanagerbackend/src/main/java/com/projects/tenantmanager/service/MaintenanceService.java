@@ -129,4 +129,17 @@ public class MaintenanceService {
         MaintenanceRequest.Department deptEnum = MaintenanceRequest.Department.valueOf(department);
         return maintenanceRepository.findByStatusAndDepartment(statusEnum, deptEnum);
     }
+
+	public boolean checkRequestExist(MaintenanceRequestDto requestDto) {
+		
+		boolean isDuplicated = false;
+		List<MaintenanceRequest> requestFromDb = maintenanceRepository.findByUnitDepartmentDescription(requestDto.getUnitNumber(),
+				requestDto.getDepartment(),
+				requestDto.getDescription());
+		
+		if(!requestFromDb.isEmpty()) isDuplicated = true;
+		
+		return isDuplicated;
+	}
+
 }

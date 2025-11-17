@@ -41,7 +41,7 @@ const AdminDashboard = () => {
       }
       
       const queryString = params.length > 0 ? '?' + params.join('&') : '';
-      const url = `/api/admin/maintenance${queryString}`;
+      const url = `http://localhost:8080/api/admin/maintenance${queryString}`;
       
       console.log('Fetching with URL:', url);
       console.log('Filters - Status:', filter, 'Department:', departmentFilter);
@@ -71,13 +71,13 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `/api/admin/maintenance/${requestId}/approve`,
+        `http://localhost:8080/api/admin/maintenance/${requestId}/approve`,
         {},
         {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
         }
       );
       fetchMaintenanceRequests(); // Refresh the list
@@ -91,13 +91,13 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `/api/admin/maintenance/${requestId}/reject`,
+        `http://localhost:8080/api/admin/maintenance/${requestId}/reject`,
         {},
         {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
         }
       );
       fetchMaintenanceRequests(); // Refresh the list
@@ -111,13 +111,13 @@ const AdminDashboard = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        `/api/admin/maintenance/${requestId}/status`,
+        `http://localhost:8080/api/admin/maintenance/${requestId}/status`,
         { status: newStatus },
         {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
         }
       );
       fetchMaintenanceRequests(); // Refresh the list

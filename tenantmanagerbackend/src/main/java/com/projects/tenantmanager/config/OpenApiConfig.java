@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class OpenApiConfig {
 
     @Bean
-    public OpenAPI tenantManagerOpenAPI() {
+    OpenAPI tenantManagerOpenAPI() {
         final String securitySchemeName = "bearerAuth";
 
         return new OpenAPI()

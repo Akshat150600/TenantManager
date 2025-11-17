@@ -36,7 +36,7 @@ export const LoginPage = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/auth/signin', formData ,{
+      const response = await axios.post('http://localhost:8080/api/auth/signin', formData ,{
          headers: {'Content-Type': 'application/json'}
         });
       const { token, user } = response.data;

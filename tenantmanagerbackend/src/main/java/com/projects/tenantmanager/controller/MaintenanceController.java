@@ -40,11 +40,15 @@ public class MaintenanceController {
             @RequestBody MaintenanceRequestDto requestDto,
             Authentication authentication) {
         try {
-            logger.info("Received maintenance request from user: {}", authentication.getName());
             String username = authentication.getName();
-            MaintenanceRequest request = maintenanceService.createRequest(requestDto, username);
-            logger.info("Successfully created maintenance request with ID: {}", request.getId());
-            return ResponseEntity.ok(request);
+            logger.info("Received maintenance request from user: {}", username);
+            if(maintenanceService.checkRequestExist(requestDto)) {
+            	return ResponseEntity.badRequest().body("Request Already Exist");
+            }else {
+            	MaintenanceRequest request = maintenanceService.createRequest(requestDto, username);
+            	logger.info("Successfully created maintenance request with ID: {}", request.getId());
+            	return ResponseEntity.ok(request);	
+            }
         } catch (Exception e) {
             logger.error("Error creating maintenance request", e);
             return ResponseEntity.badRequest().body(e.getMessage());

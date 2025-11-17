@@ -52,9 +52,6 @@ public class UserService {
         // Generate JWT token
         String token = jwtUtil.generateToken(user.getUsername(), user.getRole().name());
 
-        // Store session in Redis
-        redisSessionService.storeUserSession(user.getUsername(), token);
-
         logger.info("User authenticated successfully: {}", username);
 
         // Return AuthResponse with token and user details
